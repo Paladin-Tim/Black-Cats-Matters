@@ -1,0 +1,146 @@
+@font-face {
+  font-family: Ancient;
+  src: url(18642.ttf);
+}
+
+body {
+  background-image: url(black-abstract-222.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.wraper {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.wraper h1 {
+  text-align: center;
+  font: 38pt Ancient, fantasy;
+  line-height: 47px;
+}
+
+.cards-wraper {
+  display: grid;
+  grid-template-columns: repeat(4, 140px);
+  grid-template-rows: repeat(3, 140px);
+  grid-gap: 25px;
+  grid-auto-flow: dense;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.container {
+  -webkit-perspective: 600;
+  perspective: 600;
+  -moz-transform: perspective(600px);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  max-width: 100%;
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #fff;
+  border-radius: 9px;
+  box-shadow: 0 0 8px #fff;
+  width: 140px;
+  height: 140px;
+  background-image: url(black-abstract-222.jpg);
+  background-repeat: repeat;
+  background-position: center;
+
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.7s linear;
+  -moz-transition: 0.7s linear;
+  -o-transition: 0.7s linear;
+  transition: 0.7s linear;
+}
+
+.front,
+.back {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card .front img {
+  width: 90%;
+  height: 90%;
+  margin: 10px 8px;
+}
+
+.card .back img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* --- ANIMATION --- */
+
+.fliped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+} 
+
+.card.notmatch {
+  cursor: default;
+  border: 4px solid red;
+  box-shadow: 0 0 8px red;
+}
+
+.card.match {
+  cursor: default;
+  border: 4px solid green;
+  box-shadow: 0 0 8px green;
+}
+
+/* --- TIMER PANEL --- */
+
+.score-panel {
+  margin: 20px auto;
+  text-align: center;
+  width: 345px;
+  font: 26px bold Arial;
+}
+
+#winnerModal {
+  color: #000;
+}
