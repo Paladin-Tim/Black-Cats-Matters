@@ -1,10 +1,10 @@
 @font-face {
   font-family: Ancient;
-  src: url(18642.ttf);
+  src: url(../fonts/18642.ttf);
 }
 
 body {
-  background-image: url(black-abstract-222.jpg);
+  background-image: url(../img/black-abstract-222.jpg);
   background-repeat: repeat;
   background-position: center;
   background-attachment: fixed;
@@ -57,7 +57,7 @@ body {
   box-shadow: 0 0 8px #fff;
   width: 140px;
   height: 140px;
-  background-image: url(black-abstract-222.jpg);
+  background-image: url(../img/black-abstract-222.jpg);
   background-repeat: repeat;
   background-position: center;
 
@@ -118,7 +118,7 @@ body {
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
-} 
+}
 
 .card.notmatch {
   cursor: default;
